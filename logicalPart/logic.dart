@@ -180,4 +180,60 @@ void allPractice() {
   }
 
   s2ForChar(5);
+  void triangleP(int tn) {
+    for (int i = 0; i < tn; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write(i);
+      }
+      print("");
+    }
+  }
+
+  triangleP(9);
+  void triangleSP(int tn) {
+    for (int i = 0; i < tn; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write("* ");
+      }
+      print("");
+    }
+  }
+
+  triangleSP(9);
+  triangleP(9);
+  void triangleCP(int tn) {
+    String pOfc = "A";
+    int pc = pOfc.codeUnitAt(0);
+    for (int i = 0; i < tn; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write("${String.fromCharCode(pc + i)}");
+      }
+      print("");
+    }
+  }
+
+  triangleCP(26);
+  void trianglerP(int rN) {
+    for (int i = 1; i <= rN; i++) {
+      for (int j = i; j > 0; j--) {
+        stdout.write(j);
+      }
+      print("");
+    }
+  }
+
+  trianglerP(4);
+  void floydstri(int FlN) {
+    int floydsum = 1;
+    
+    for (int i = 1; i <= FlN; i++) {
+      for (int j = 1; j < i; j++) {
+        stdout.write(floydsum);
+        floydsum++;
+      }
+      print("");
+    }
+  }
+
+  floydstri(5);
 }
