@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   checkCase("h");
   allPractice();
@@ -107,4 +109,75 @@ void allPractice() {
   }
 
   nF(10);
+  void pattren(int nP) {
+    for (int i = 1; i <= nP; i++) {
+      for (int j = 1; j <= nP; j++) {
+        stdout.write("* ");
+      }
+      print("");
+    }
+  }
+
+  pattren(5);
+  void patterForNum(int pN) {
+    for (int i = 0; i < pN; i++) {
+      for (int j = i; j < pN; j++) {
+        stdout.write(j);
+      }
+      print("");
+    }
+  }
+
+  patterForNum(5);
+  void pattrenforChar(int ch) {
+    for (int i = 0; i <= ch; i++) {
+      String Ch = "A";
+      int c = Ch.codeUnitAt(0);
+      for (int j = 0; j <= ch; j++) {
+        stdout.write("${String.fromCharCode(c)} ");
+        c = c + 1;
+      }
+      print("");
+    }
+  }
+
+  pattrenforChar(8);
+  void patternForSmall(int smallChr) {
+    for (int i = 0; i <= smallChr; i++) {
+      String small = "a";
+      int smallC = small.codeUnitAt(0);
+      for (int j = 0; j <= smallChr; j++) {
+        stdout.write("${String.fromCharCode(smallC)}");
+        smallC++;
+      }
+      print(" ");
+    }
+  }
+
+  patternForSmall(5);
+  void square2Pattern(int n2) {
+    int reSum = 1;
+    for (int i = 0; i < n2; i++) {
+      for (int j = 0; j < n2; j++) {
+        stdout.write(reSum);
+        reSum++;
+      }
+      print("");
+    }
+  }
+
+  square2Pattern(4);
+  void s2ForChar(int rN) {
+    String ch = "A";
+    int rCh = ch.codeUnitAt(0);
+    for (int i = 0; i < rN; i++) {
+      for (int j = 0; j < rN; j++) {
+        stdout.write("${String.fromCharCode(rCh)}");
+        rCh++;
+      }
+      print("");
+    }
+  }
+
+  s2ForChar(5);
 }
