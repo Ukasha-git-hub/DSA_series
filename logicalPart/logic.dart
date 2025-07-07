@@ -225,7 +225,7 @@ void allPractice() {
   trianglerP(4);
   void floydstri(int FlN) {
     int floydsum = 1;
-    
+
     for (int i = 1; i <= FlN; i++) {
       for (int j = 1; j < i; j++) {
         stdout.write(floydsum);
@@ -236,4 +236,134 @@ void allPractice() {
   }
 
   floydstri(5);
+  void floydschr(double fchr) {
+    String sumOfFloydChr = 'a';
+    int coFc = sumOfFloydChr.codeUnitAt(0);
+    for (int i = 0; i <= fchr; i++) {
+      for (int j = 1; j < i; j++) {
+        stdout.write("${String.fromCharCode(coFc)}");
+        coFc++;
+      }
+      print('');
+    }
+  }
+
+  floydschr(7);
+  void floydRevLoop(int rL) {
+    int codeOfreChr = "a".codeUnitAt(0);
+
+    for (int i = 0; i < rL; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write("${String.fromCharCode(codeOfreChr + i - j)}");
+      }
+      print("");
+    }
+  }
+
+  floydRevLoop(4);
+  void invertedTriangle(int iTn) {
+    for (int i = 1; i <= iTn; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 0; j <= iTn - i; j++) {
+        stdout.write(i);
+      }
+      print("");
+    }
+  }
+
+  invertedTriangle(4);
+  void invertedOfchr(int iN) {
+    int noForChr = "a".codeUnitAt(0);
+    for (int i = 0; i <= iN; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 0; j <= iN - i; j++) {
+        stdout.write("${String.fromCharCode(noForChr + i)}");
+      }
+      print("");
+    }
+  }
+
+  invertedOfchr(5);
+  void pyramidTri(int PyraN) {
+    for (int i = 0; i < PyraN; i++) {
+      for (int j = 0; j < PyraN - i - 1; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 1; j <= i + 1; j++) {
+        stdout.write(j);
+      }
+      for (int j = i; j > 0; j--) {
+        stdout.write(j);
+      }
+      print("");
+    }
+  }
+
+  pyramidTri(4);
+  void hollowDiamond(int Dn) {
+    for (int i = 0; i < Dn; i++) {
+      for (int j = 0; j < Dn - i - 1; j++) {
+        stdout.write(" ");
+      }
+      stdout.write("*");
+      if (i != 0) {
+        for (int j = 0; j < 2 * i - 1; j++) {
+          stdout.write(" ");
+        }
+        stdout.write("*");
+      }
+      print("");
+    }
+    for (int i = 0; i < Dn - 1; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        stdout.write(" ");
+      }
+      stdout.write("*");
+      if (i != Dn - 2) {
+        for (int j = 0; j < 2 * (Dn - i) - 5; j++) {
+          stdout.write(" ");
+        }
+        stdout.write("*");
+      }
+      print("");
+    }
+  }
+
+  hollowDiamond(6);
+  void butterFly(int FlyN) {
+    for (int i = 0; i <= FlyN; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        stdout.write("*");
+      }
+      for (int j = 0; j <2*( FlyN - i ); j++) {
+        stdout.write(" ");
+      }
+      
+      
+      for (int j = 0; j < i + 1; j++) {
+        stdout.write("*");
+      }
+      print("");
+    }
+    for (int i = FlyN; i >= 0; i--) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write("*");
+      }
+      for (int j = 0; j < 2*(FlyN-i) ; j++) {
+        stdout.write(" ");
+      }
+     
+      
+       for (int j = 0; j <= i; j++) {
+        stdout.write("*");
+      }
+      print("");
+    }
+  }
+
+  butterFly(5);
 }
