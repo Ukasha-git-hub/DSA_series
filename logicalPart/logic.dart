@@ -444,8 +444,8 @@ void allPractice() {
         stdout.write("${String.fromCharCode(code)}");
         code++;
       }
-      for (int j = pcN - i-1; j >= 0; j--) {
-         int code = "A".codeUnitAt(0) + j;
+      for (int j = pcN - i - 1; j >= 0; j--) {
+        int code = "A".codeUnitAt(0) + j;
         stdout.write("${String.fromCharCode(code)}");
       }
       print("");
@@ -453,4 +453,25 @@ void allPractice() {
   }
 
   pyraForChr(4);
+  print("hollow character ");
+  void hollowchr(int hCn) {
+    for (int i = 0; i <= hCn; i++) {
+      int hAlpha = "A".codeUnitAt(0);
+      for (int j = hCn - 1; j >= i; j--) {
+        stdout.write(" ");
+      }
+      stdout.write("${String.fromCharCode(hAlpha)}");
+
+      if (i != 0) {
+        for (int j = 0; j < 2 * i - 1; j++) {
+          stdout.write(" ");
+        }
+        stdout.write("${String.fromCharCode(hAlpha)}");
+      }
+      
+      print("");
+    }
+  }
+
+  hollowchr(6);
 }
