@@ -339,11 +339,10 @@ void allPractice() {
       for (int j = 0; j < i + 1; j++) {
         stdout.write("*");
       }
-      for (int j = 0; j <2*( FlyN - i ); j++) {
+      for (int j = 0; j < 2 * (FlyN - i); j++) {
         stdout.write(" ");
       }
-      
-      
+
       for (int j = 0; j < i + 1; j++) {
         stdout.write("*");
       }
@@ -353,12 +352,11 @@ void allPractice() {
       for (int j = 0; j <= i; j++) {
         stdout.write("*");
       }
-      for (int j = 0; j < 2*(FlyN-i) ; j++) {
+      for (int j = 0; j < 2 * (FlyN - i); j++) {
         stdout.write(" ");
       }
-     
-      
-       for (int j = 0; j <= i; j++) {
+
+      for (int j = 0; j <= i; j++) {
         stdout.write("*");
       }
       print("");
@@ -366,4 +364,93 @@ void allPractice() {
   }
 
   butterFly(5);
+  void newPattern(int nN) {
+    for (int i = 0; i < nN; i++) {
+      for (int j = 0; j <= nN - i - 1; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 1; j < 2 * i; j++) {
+        stdout.write("*");
+      }
+      // for (int j = 1; j <= i + 1; j++) {
+      //   stdout.write("*");
+      // }
+
+      print("");
+    }
+    for (int i = 0; i <= (nN - 1); i++) {
+      for (int j = 0; j < i; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 0; j <= 2 * (nN - i - 1); j++) {
+        stdout.write("*");
+      }
+      print("");
+    }
+  }
+
+  newPattern(5);
+  void pyraForNums(int pNp) {
+    for (int i = 0; i < pNp; i++) {
+      for (int j = 0; j < pNp - i - 1; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 1; j <= i; j++) {
+        stdout.write(j);
+      }
+      for (int j = i; j > 1; j--) {
+        stdout.write(j - 1);
+      }
+      print("");
+    }
+    for (int i = 0; i < pNp - 1; i++) {
+      for (int j = 0; j <= i; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 1; j < pNp - i - 1; j++) {
+        stdout.write(j);
+      }
+      for (int j = pNp - i - 3; j >= 1; j--) {
+        stdout.write(j);
+      }
+      print("");
+    }
+  }
+
+  pyraForNums(6);
+  void pyraForChr(int pcN) {
+    for (int i = 0; i < pcN; i++) {
+      int code = "A".codeUnitAt(0);
+      for (int j = 0; j <= pcN - i - 1; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 0; j <= i; j++) {
+        stdout.write("${String.fromCharCode(code)}");
+        code++;
+      }
+      for (int j = i - 1; j >= 0; j--) {
+        int code = "A".codeUnitAt(0) + j;
+        stdout.write("${String.fromCharCode(code)}");
+      }
+      print("");
+    }
+
+    for (int i = 0; i <= pcN - 1; i++) {
+      int code = "A".codeUnitAt(0);
+      for (int j = 0; j < i + 1; j++) {
+        stdout.write(" ");
+      }
+      for (int j = 0; j < pcN - i - 1; j++) {
+        stdout.write("${String.fromCharCode(code)}");
+        code++;
+      }
+      for (int j = pcN - i-1; j >= 0; j--) {
+         int code = "A".codeUnitAt(0) + j;
+        stdout.write("${String.fromCharCode(code)}");
+      }
+      print("");
+    }
+  }
+
+  pyraForChr(4);
 }
