@@ -23,6 +23,7 @@ int Nfactorial(int nf) {
   }
   return factorial;
 }
+
 void main() {
   print(minOfnum(4, 2));
   print(sumOfN(10));

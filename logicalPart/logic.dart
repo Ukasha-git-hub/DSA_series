@@ -468,10 +468,66 @@ void allPractice() {
         }
         stdout.write("${String.fromCharCode(hAlpha)}");
       }
-      
+
       print("");
     }
   }
 
   hollowchr(6);
+  void newPyra(int nPN) {
+    for (int i = 1; i <= nPN; i++) {
+      for (int j = 0; j < nPN - i; j++) {
+        stdout.write("  ");
+      }
+      for (int j = i; j > 0; j--) {
+        stdout.write("$j ");
+      }
+      for (int j = 2; j <= i; j++) {
+        stdout.write("$j ");
+      }
+      print("");
+    }
+  }
+
+  newPyra(7);
+  void holloW(int hoNo) {
+    for (int i = 0; i < hoNo; i++) {
+      for (int j = 0; j <= hoNo - i - 1; j++) {
+        stdout.write(" ");
+      }
+      stdout.write("*");
+      if (i != 0) {
+        for (int j = 1; j <= 2 * i - 1; j++) {
+          stdout.write(" ");
+        }
+        stdout.write("*");
+      }
+      print("");
+    }
+    for (int i = 0; i <= 2 * hoNo - 1; i++) {
+      stdout.write("*");
+    }
+    // stdout.write("*");
+    print("");
+  }
+
+  holloW(5);
+
+  void hollowWithNum(int numHOllow) {
+    for (int i = 0; i <= numHOllow; i++) {
+      for (int j = 0; j <= numHOllow - i-1; j++) {
+        stdout.write(" ");
+      }
+      stdout.write(1);
+      if (i != 0) {
+        for (int j = 1; j <= 2 * i - 1; j++) {
+          stdout.write(" ");
+        }
+        stdout.write(i+1);
+        print("");
+      }
+    }
+  }
+
+  hollowWithNum(5);
 }
