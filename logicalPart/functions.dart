@@ -1,6 +1,3 @@
-import 'dart:math';
-
-
 int minOfnum(int a, int b) {
   if (a < b) {
     return a;
@@ -77,7 +74,7 @@ bool isPrime(int numbers) {
     return false;
   }
   //(int i = 2; i <= sqrt(nums).toInt(); i++)
-  for (int i = 2; i *i <= numbers; i++) {
+  for (int i = 2; i * i <= numbers; i++) {
     if (numbers % i == 0) {
       return false;
     }
@@ -85,7 +82,21 @@ bool isPrime(int numbers) {
   return true;
 }
 
+// fibonacci series
+int fibonacci(int fbn) {
+  int a = 0;
+  int b = 1;
+  for (int i = 0; i < fbn; i++) {
+    print(a);
+    int next = a + b;
+    a = b;
+    b = next;
+  }
+  return a;
+}
+
 void main() {
+  print(" this is fibonacci series ${fibonacci(7)}");
   (h2(12));
   h1(8);
   print("nCR :${nCr(8, 2)}");
