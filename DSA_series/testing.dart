@@ -250,18 +250,51 @@ void count0(int n) {
     if (last == 0) {
       count++;
     }
-    
   }
   print(count);
 }
 
+void index() {
+  List<int> num = [32, 4, 3, 5, 5, 654, 6546, 35];
+  int small = num[0];
+  int large = num[0];
+  int sI = 0;
+  int lI = 0;
+  for (int i = 0; i < num.length; i++) {
+    if (small > num[i]) {
+      small = num[i];
+      sI = i;
+      // print(i);
+    } else if (large < num[i]) {
+      large = num[i];
+      lI = i;
+      //print(i);
+    }
+  }
+  print(sI);
+  print(lI);
+  print(small);
+  print(large);
+}
+
+void reverse() {
+  List nums = [1, 23, 4, 63, 55, 6435, 534];
+  List last = [];
+  for (var i = nums.length - 1; i >= 0; i--) {
+    last.add(nums[i]);
+  }
+  print(last);
+}
+
 void main() {
-  count0(10101);
-  print(powercheck2(4));
-  print(powerCheck(5));
-  isPower(64);
-  power2(128);
-  multiTaks(7238489);
+  reverse();
+  // index();
+  // count0(10101);
+  // print(powercheck2(4));
+  // print(powerCheck(5));
+  // isPower(64);
+  // power2(128);
+  // multiTaks(7238489);
   // count(112344138758134585);
   // palindrome(12321);
   // product(1239);
